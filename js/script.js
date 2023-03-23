@@ -1,14 +1,3 @@
-// Milestone 0:
-// Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l'immagine grande in modo da poter stilare lo slider.
-// Milestone 1:
-// Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.
-// Al click dell'utente sulle frecce verso sinistra o destra, l'immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
-
-// Input
-
-// Milestone 0:
-// Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l'immagine grande in modo da poter stilare lo slider.
-
 // Milestone 1:
 // Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.
 
@@ -57,8 +46,6 @@ for (let i = 0; i < imagesArray.length; i++) {
 // Creo una variabile con la quale prelevo il contenitore
 const cardContainer = document.getElementsByClassName("item");
 
-// console.log(img, p, h2);
-
 // Assegno al primo Elemento dell'array la variabile firstimage
 let indexImage = 0;
 
@@ -67,6 +54,10 @@ cardContainer[indexImage].classList.add("active");
 
 const upBtn = document.querySelector(".arrowup");
 const downBtn = document.querySelector(".arrowdown");
+
+
+// BONUS 2:
+// Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi) l’immagine attiva dovrà cambiare alla successiva.
 
 // IMPLEMENTO IL DELAY
 
