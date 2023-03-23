@@ -15,7 +15,7 @@
 const imagesArray = [
   {
     image: "img/01.webp",
-    title: "Marvel's Spiderman Miles Morales",
+    title: "Marvel's Spiderman M. Morales",
     text: "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.",
   },
   {
@@ -48,7 +48,7 @@ for (let i = 0; i < imagesArray.length; i++) {
   const currentImg = imagesArray[i];
   console.log(currentImg);
 
-  // Creo una variabile per aggiungere il div con classe item
+  // Creo una variabile per aggiungere il div con classe item tramite template literal
   const sliderItems = `<div class="item"><img src="${currentImg.image}"> <h2 class="title-text">${currentImg.title}</h2>
   <p class="p-text">${currentImg.text}</p></div> `;
   item.innerHTML += sliderItems;
@@ -57,20 +57,13 @@ for (let i = 0; i < imagesArray.length; i++) {
 // Creo una variabile con la quale prelevo il contenitore
 const cardContainer = document.getElementsByClassName("item");
 
-const img = document.querySelector("img");
-const p = document.querySelector("p");
-const h2 = document.querySelector("h2");
-
-console.log(img, p, h2);
+// console.log(img, p, h2);
 
 // Assegno al primo Elemento dell'array la variabile firstimage
-let firstImage = 0;
+let indexImage = 0;
 
 // AL primo elemento dell'array vado ad aggiungere la classe active
-cardContainer[firstImage].classList.add("active");
-img.classList.add("active");
-h2.classList.add("active");
-p.classList.add("active");
+cardContainer[indexImage].classList.add("active");
 
 const upBtn = document.querySelector(".arrowup");
 const downBtn = document.querySelector(".arrowdown");
@@ -97,35 +90,25 @@ upBtn.addEventListener("click", function () {
 // CICLO INFINITO
 
 function arrowDownDelay() {
-  cardContainer[firstImage].classList.remove("active");
-  img.classList.remove("active");
-  h2.classList.remove("active");
-  p.classList.remove("active");
-  if (firstImage < cardContainer.length - 1) {
-    firstImage++;
+  cardContainer[indexImage].classList.remove("active");
+
+  if (indexImage < cardContainer.length - 1) {
+    indexImage++;
   } else {
-    firstImage = 0;
+    indexImage = 0;
   }
 
-  cardContainer[firstImage].classList.add("active");
-  img.classList.add("active");
-  h2.classList.add("active");
-  p.classList.add("active");
+  cardContainer[indexImage].classList.add("active");
 }
 
 function arrowUpDelay() {
-  imagesArray[firstImage].classList.remove("active");
-  img.classList.add("active");
-  h2.classList.add("active");
-  p.classList.add("active");
-  if (firstImage > 0) {
-    firstImage--;
+  imagesArray[indexImage].classList.remove("active");
+
+  if (indexImage > 0) {
+    indexImage--;
   } else {
-    firstImage = 4;
+    indexImage = 4;
   }
 
-  imagesArray[firstImage].classList.add("active");
-  img.classList.add("active");
-  h2.classList.add("active");
-  p.classList.add("active");
+  imagesArray[indexImage].classList.add("active");
 }

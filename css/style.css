@@ -3,8 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 img {
   max-width: 100%;
@@ -21,7 +21,7 @@ img {
   position: relative;
   width: 50%;
   margin: 0 auto;
-  border: 5px solid rgba(16, 168, 71, 0.8);
+  border: 5px solid blue;
 }
 .slider-items {
   width: 100%;
@@ -36,15 +36,20 @@ img {
 
 .title-text {
   bottom: 90%;
-  right: 10%;
-  color: white;
-  font-size: 2rem;
+  right: 5%;
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 1.2rem;
+
+  padding: 5px;
 }
 
 .p-text {
   bottom: 10%;
-  left: 10%;
-  color: white;
+  left: 5%;
+  color: whitesmoke;
+  font-weight: 900;
+
 }
 
 .item {
@@ -56,7 +61,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
 .item.active {
@@ -70,7 +74,7 @@ img {
   transform: translate(-50%);
   width: 30px;
   height: 30px;
-  background-color: rgba(16, 168, 71, 0.8);
+  background-color: blue;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -80,8 +84,10 @@ img {
 
 .arrowup {
   top: 10px;
+  color: white;
 }
 
 .arrowdown {
   bottom: 10px;
+  color: white;
 }
